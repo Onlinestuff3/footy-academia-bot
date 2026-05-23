@@ -224,7 +224,7 @@ def main():
     app.add_handler(CommandHandler("quiz", quiz))
     app.add_handler(CallbackQueryHandler(button_handler))
     print("Footy Academia bot is running...")
-    app.run_polling()
+    app.run_polling(allowed_updates=Update.ALL_TYPES)
 
 if __name__ == "__main__":
     main()
